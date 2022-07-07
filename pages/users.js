@@ -2,12 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Navbar from 'components/Navbar';
 
-const Users = () => {
-    const [users, setUsers] = useState([
-        { id: 1, name: 'John Doe' },
-        { id: 2, name: 'Vincent Van Gogh' },
-    ]);
-
+const Users = ({ users }) => {
     return (
         <div>
             <Navbar />
@@ -26,3 +21,9 @@ const Users = () => {
 };
 
 export default Users;
+
+export async function getServerSideProps() {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users`);
+    const users = await res.json();
+    return { props: { users } };
+}
