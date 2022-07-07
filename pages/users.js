@@ -1,11 +1,9 @@
-import { useState } from 'react';
 import Link from 'next/link';
-import Navbar from 'components/Navbar';
+import MainContainer from 'components/MainContainer';
 
 const Users = ({ users }) => {
     return (
-        <div>
-            <Navbar />
+        <MainContainer title='Список пользователей'>
             <h1>Список пользователей</h1>
             <ul>
                 {users.map((user) => (
@@ -16,7 +14,7 @@ const Users = ({ users }) => {
                     </li>
                 ))}
             </ul>
-        </div>
+        </MainContainer>
     );
 };
 

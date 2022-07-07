@@ -1,11 +1,10 @@
-import Navbar from "components/Navbar";
+import MainContainer from 'components/MainContainer';
 
 const Home = () => {
     return (
-        <div>
-            <Navbar/>
+        <MainContainer title="Home page">
             <h1>Home</h1>
-        </div>
+        </MainContainer>
     );
 };
 
