@@ -3,7 +3,7 @@ import MainContainer from 'components/MainContainer';
 
 const Users = ({ users }) => {
     return (
-        <MainContainer title='Список пользователей'>
+        <MainContainer title="Список пользователей">
             <h1>Список пользователей</h1>
             <ul>
                 {users.map((user) => (
@@ -20,7 +20,7 @@ const Users = ({ users }) => {
 
 export default Users;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const res = await fetch(`https://jsonplaceholder.typicode.com/users`);
     const users = await res.json();
     return { props: { users } };
