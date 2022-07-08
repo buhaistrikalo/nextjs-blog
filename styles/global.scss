@@ -1,0 +1,38 @@
+* {
+    font-family: Source Serif Pro;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    background: #f5f5f7;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #555555;
+
+    transition: box-shadow 0.3s;
+
+    &:hover {
+        color: #7247ca;
+        box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.2);
+    }
+    &:disabled {
+        background: #fff;
+        box-shadow: none;
+        color: inherit;
+        cursor: not-allowed;
+        color: #a7a7a7;
+    }
+}

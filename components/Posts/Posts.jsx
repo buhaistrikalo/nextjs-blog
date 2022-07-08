@@ -16,7 +16,7 @@ const Posts = ({ posts, users }) => {
                         <PostsItem
                             post={post}
                             key={post.id}
-                            isNew={index === 0}
+                            isNew={post.id === 1}
                             author={userName(post.userId)}
                         />
                     ))}
