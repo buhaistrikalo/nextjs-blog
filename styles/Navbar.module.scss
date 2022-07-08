@@ -1,0 +1,22 @@
+.navbar {
+    padding: 39px 10px;
+    border-bottom: #eaeaee 1px solid;
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.navbar__link {
+    cursor: pointer;
+    color: black;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+
+    letter-spacing: 0.16em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    margin-left: 39px;
+}
