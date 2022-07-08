@@ -1,5 +1,4 @@
 import MainContainer from 'components/MainContainer';
-import { useRouter } from 'next/router';
 import styles from 'styles/User.module.scss';
 
 export default function User({ user }) {

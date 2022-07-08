@@ -1,6 +1,6 @@
 import Center from 'components/Center';
 import MainContainer from 'components/MainContainer';
-import Posts from 'components/Posts';
+import Posts from 'components/Posts/Posts';
 
 const Home = ({ posts, users }) => {
     return (
