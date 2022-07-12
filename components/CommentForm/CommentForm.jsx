@@ -1,6 +1,6 @@
-import styles from './Form.module.scss';
+import styles from './CommentForm.module.scss';
 
-const Form = () => {
+const CommentForm = () => {
     return (
         <form action="#" method="post" className={styles.comment_block}>
             <div className={styles.name_block}>
@@ -18,4 +18,4 @@ const Form = () => {
     );
 };
 
-export default Form;
+export default CommentForm;

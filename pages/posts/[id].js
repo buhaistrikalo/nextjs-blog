@@ -1,14 +1,19 @@
 import Center from 'components/Center';
-import Form from 'components/Form';
+import Form from 'components/CommentForm';
 import MainContainer from 'components/MainContainer';
 import PostsItem from 'components/Posts/PostsItem';
 
-const Post = ({ post, comments }) => {
+const Post = ({ post, comments, users }) => {
+    const userName = (userId) => {
+        const user = users.find((user) => user.id === userId);
+        return user ? user.name : '';
+    };
+
     return (
         <MainContainer title={post.title}>
             <Center>
                 <div>
-                    {post && comments && <PostsItem post={post} />}
+                    {post && comments && <PostsItem post={post} author={userName(post.userId)} />}
                     <Form />
                 </div>
             </Center>
@@ -23,6 +28,8 @@ export async function getServerSideProps({ params }) {
     const post = await resPost.json();
     const resCom = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}/comments`);
     const comments = await resCom.json();
+    const resUsers = await fetch(`https://jsonplaceholder.typicode.com/users`);
+    const users = await resUsers.json();
 
-    return { props: { post, comments } };
+    return { props: { post, comments, users } };
 }
