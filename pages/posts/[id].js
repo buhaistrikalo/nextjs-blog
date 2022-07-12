@@ -1,4 +1,5 @@
 import Center from 'components/Center';
+import Form from 'components/Form';
 import MainContainer from 'components/MainContainer';
 import PostsItem from 'components/Posts/PostsItem';
 
@@ -6,9 +7,10 @@ const Post = ({ post, comments }) => {
     return (
         <MainContainer title={post.title}>
             <Center>
-                <>{post && comments && <PostsItem post={post} />}
-                
-                </>
+                <div>
+                    {post && comments && <PostsItem post={post} />}
+                    <Form />
+                </div>
             </Center>
         </MainContainer>
     );

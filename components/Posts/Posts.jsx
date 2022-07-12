@@ -1,5 +1,6 @@
-import styles from 'styles/Posts.module.scss';
 import PostsItem from './PostsItem';
+
+import styles from './Posts.module.scss';
 
 const Posts = ({ posts, users }) => {
     const userName = (userId) => {
@@ -18,6 +19,7 @@ const Posts = ({ posts, users }) => {
                             key={post.id}
                             isNew={post.id === 1}
                             author={userName(post.userId)}
+                            showComments
                         />
                     ))}
             </div>

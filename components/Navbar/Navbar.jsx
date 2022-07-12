@@ -1,8 +1,9 @@
-import React from 'react';
 import Link from 'next/link';
-import styles from 'styles/Navbar.module.scss';
-import Center from './Center';
-import Iconify from './Iconify';
+
+import Center from 'components/Center';
+import Iconify from 'components/Iconify';
+
+import styles from './Navbar.module.scss';
 
 const Navbar = () => {
     return (

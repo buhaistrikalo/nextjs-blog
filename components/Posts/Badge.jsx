@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'styles/Posts.module.scss';
+import styles from './Posts.module.scss';
 
 const Badge = ({ text }) => {
     return (

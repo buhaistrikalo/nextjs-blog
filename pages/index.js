@@ -1,9 +1,10 @@
+import { useRouter } from 'next/router';
+
 import Card from 'components/Card';
 import Center from 'components/Center';
 import MainContainer from 'components/MainContainer';
 import Posts from 'components/Posts';
 
-import { useRouter } from 'next/router';
 
 const Home = ({ posts, users }) => {
     const router = useRouter();

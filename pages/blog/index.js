@@ -1,7 +1,8 @@
+import { useRouter } from 'next/router';
+
 import Center from 'components/Center';
 import MainContainer from 'components/MainContainer';
 import Posts from 'components/Posts';
-import { useRouter } from 'next/router';
 
 const Blog = ({ posts, users, page }) => {
     const router = useRouter();

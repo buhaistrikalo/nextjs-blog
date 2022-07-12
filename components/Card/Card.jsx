@@ -1,11 +1,10 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import profilePic from '../public/me.jpg';
-import Iconify from './Iconify';
+import profilePic from '../../public/me.jpg';
+import Iconify from 'components/Iconify';
 
-import styles from 'styles/Card.module.scss';
+import styles from './Card.module.scss';
 
 const Card = () => {
     return (

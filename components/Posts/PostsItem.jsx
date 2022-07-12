@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import Badge from '../Badge';
+import Badge from './Badge';
 import Iconify from '../Iconify';
-import styles from 'styles/Posts.module.scss';
+import styles from './Posts.module.scss';
 
-const PostsItem = ({ post, isNew, author }) => {
+const PostsItem = ({ post, isNew, author, showComments }) => {
     return (
         <div className={styles.post__container}>
             <div className={styles.post__header}>
@@ -18,12 +18,14 @@ const PostsItem = ({ post, isNew, author }) => {
             </Link>
             <span className={styles.post__body}>{post.body}</span>
 
-            <Link href={`/posts/${post.id}`}>
-                <a className={styles.post__footer}>
-                    <Iconify icon="icon-park-solid:comments" className={styles.post__icon} />
-                    <span className={styles.post__footer_title}>Comments</span>
-                </a>
-            </Link>
+            {showComments && (
+                <Link href={`/posts/${post.id}`}>
+                    <a className={styles.post__footer}>
+                        <Iconify icon="icon-park-solid:comments" className={styles.post__icon} />
+                        <span className={styles.post__footer_title}>Comments</span>
+                    </a>
+                </Link>
+            )}
         </div>
     );
 };
