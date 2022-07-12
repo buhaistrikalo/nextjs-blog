@@ -4,7 +4,7 @@ import PostsItem from './PostsItem';
 const Posts = ({ posts, users }) => {
     const userName = (userId) => {
         const user = users.find((user) => user.id === userId);
-        return user.name;
+        return user ? user.name : '';
     };
 
     return (

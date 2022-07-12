@@ -1,6 +1,8 @@
+import Card from 'components/Card';
 import Center from 'components/Center';
 import MainContainer from 'components/MainContainer';
-import Posts from 'components/Posts/Posts';
+import Posts from 'components/Posts';
+
 import { useRouter } from 'next/router';
 
 const Home = ({ posts, users }) => {
@@ -9,10 +11,24 @@ const Home = ({ posts, users }) => {
         <MainContainer title="Home page">
             <Center>
                 <div>
+                    <h2 style={{ marginBottom: 24 }}>Posts</h2>
                     <Posts posts={posts} users={users} />
                     <Center>
-                        <button onClick={() => router.push(`/blog`)}>Read more...</button>
+                        <button onClick={() => router.push(`/blog`)} style={{ marginBottom: 64 }}>
+                            Read more...
+                        </button>
                     </Center>
+
+                    <h2 style={{ marginBottom: 24 }}>Team</h2>
+                    <div
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            marginBottom: 64,
+                        }}>
+                        <Card />
+                        <Card />
+                    </div>
                 </div>
             </Center>
         </MainContainer>
@@ -21,12 +37,16 @@ const Home = ({ posts, users }) => {
 
 export default Home;
 
-export async function getStaticProps() {
-    const resPosts = await fetch(`https://jsonplaceholder.typicode.com/posts?_start=0&_limit=4`);
+export async function getServerSideProps({ query: { page = 1 } }) {
+    const LIMIT_POSTS = 4;
+    const startPost = +page === 1 ? 0 : (+page - 1) * LIMIT_POSTS;
+    const resPosts = await fetch(
+        `https://jsonplaceholder.typicode.com/posts?_start=${startPost}&_limit=${LIMIT_POSTS}`,
+    );
     const posts = await resPosts.json();
 
     const resUsers = await fetch(`https://jsonplaceholder.typicode.com/users`);
     const users = await resUsers.json();
 
-    return { props: { posts, users } };
+    return { props: { posts, users, page: +page } };
 }

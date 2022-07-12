@@ -9,7 +9,7 @@ const MainContainer = ({ children, title }) => {
                 <title>{title}</title>
             </Head>
             <Navbar />
-            <div>{children}</div>
+            <div style={{ marginTop: 32 }}>{children}</div>
         </>
     );
 };
