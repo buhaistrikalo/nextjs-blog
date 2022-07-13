@@ -1,8 +1,8 @@
 // icons
 import { Icon } from '@iconify/react';
 
-const Iconify = ({ icon, sx, ...other }) => {
-    return <Icon icon={icon} sx={{ ...sx }} {...other} />;
+const Iconify = ({ icon, styles, ...other }) => {
+    return <Icon icon={icon} styles={{ ...styles }} {...other} />;
 };
 
 export default Iconify;

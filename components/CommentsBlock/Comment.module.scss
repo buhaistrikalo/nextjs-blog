@@ -1,0 +1,40 @@
+.comment__container {
+    display: flex;
+    max-width: 673px;
+
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #f5f5f7;
+
+    button {
+        background-color: #fff;
+    }
+    span {
+        font-size: 14px;
+    }
+}
+
+.avatar {
+    max-height: 50px;
+    margin-right: 24px;
+}
+
+.title__container {
+    margin-bottom: 16px;
+}
+
+.name {
+    margin-right: 16px;
+}
+
+.secondary {
+    color: #979797;
+}
+
+.text {
+    margin-bottom: 16px;
+}
+
+.icon {
+    margin-right: 8px;
+}

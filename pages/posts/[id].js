@@ -2,6 +2,7 @@ import Center from 'components/Center';
 import Form from 'components/CommentForm';
 import MainContainer from 'components/MainContainer';
 import PostsItem from 'components/Posts/PostsItem';
+import CommentsBlock from 'components/CommentsBlock';
 
 const Post = ({ post, comments, users }) => {
     const userName = (userId) => {
@@ -15,6 +16,7 @@ const Post = ({ post, comments, users }) => {
                 <div>
                     {post && comments && <PostsItem post={post} author={userName(post.userId)} />}
                     <Form />
+                    <CommentsBlock comments={comments} />
                 </div>
             </Center>
         </MainContainer>
