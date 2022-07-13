@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const MainContainer = ({ children, title }) => {
     return (
@@ -11,6 +12,7 @@ const MainContainer = ({ children, title }) => {
             </Head>
             <Navbar />
             <div style={{ marginTop: 32 }}>{children}</div>
+            <Footer />
         </>
     );
 };

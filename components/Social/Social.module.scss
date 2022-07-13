@@ -1,0 +1,12 @@
+.social {
+    display: flex;
+    font-size: 22px;
+    svg {
+        margin: 0 8px;
+        cursor: pointer;
+
+        &:hover {
+            color: #432a75;
+        }
+    }
+}
