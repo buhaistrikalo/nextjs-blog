@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import Iconify from 'components/Iconify';
 
 import styles from './Social.module.scss';
@@ -10,9 +8,9 @@ const Social = () => {
     return (
         <div className={styles.social}>
             {social.map((item) => (
-                <Link href={item.href} >
+                <a href={item.href} target="_blank">
                     <Iconify icon={item.icon} />
-                </Link>
+                </a>
             ))}
         </div>
     );

@@ -5,7 +5,7 @@ const SOCIAL_ARRAY = [
         href: 'https://krasnoyarsk.hh.ru/resume/146af7d1ff08cda9fd0039ed1f3956395a7179',
         icon: 'carbon:letter-hh',
     },
-    { title: 'Telegram', href: 'https://t.me/kirilltcoi', icon: 'logos:telegram' },
+    { title: 'Telegram', href: 'https://t.me/kirilltcoi', icon: 'bxl:telegram' },
 ];
 
 export default SOCIAL_ARRAY;
